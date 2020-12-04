@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import Logo from '../components/Logo'
 import { logout } from '../actions/userActions'
 
 const Header = () => {
@@ -16,11 +17,13 @@ const Header = () => {
 	return (
 		<header>
 			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+				<Logo />
 				<Container>
 					<LinkContainer to='/'>
 						<Navbar.Brand>Myshop</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ml-auto'>
 							<LinkContainer to='/cart'>
